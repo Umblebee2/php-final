@@ -51,7 +51,7 @@ $doctor = $_SESSION['dname'];
     
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> Global Hospital </a>
+  <a class="navbar-brand" href="#"><i class="fa fa-user-plus" aria-hidden="true"></i> HMS </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -66,16 +66,16 @@ $doctor = $_SESSION['dname'];
 
   <style >
     .bg-primary {
-    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+    background: -webkit-linear-gradient(#99FF66, #99FF99);
 }
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #342ac1;
+    background-color: #99FF66;
     border-color: #007bff;
 }
 .text-primary {
-    color: #342ac1!important;
+    color: #99FF66!important;
 }
   </style>
 
@@ -108,6 +108,7 @@ $doctor = $_SESSION['dname'];
       <a class="list-group-item list-group-item-action active" href="#list-dash" role="tab" aria-controls="home" data-toggle="list">Dashboard</a>
       <a class="list-group-item list-group-item-action" href="#list-app" id="list-app-list" role="tab" data-toggle="list" aria-controls="home">Appointments</a>
       <a class="list-group-item list-group-item-action" href="#list-pres" id="list-pres-list" role="tab" data-toggle="list" aria-controls="home"> Prescription List</a>
+     
       
     </div><br>
   </div>
