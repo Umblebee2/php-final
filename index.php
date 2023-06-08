@@ -80,7 +80,7 @@ function checklen()
                 <div class="row">
                     <div class="col-md-3 register-left" style="margin-top: 10%;right: 5%">
                         <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
-                        <h3>Welcome</h3>
+                        <h3>Welcome to Our Hospital</h3>
                        
                     </div>
                     <div class="col-md-9 register-right" style="margin-top: 40px;left: 80px;">
