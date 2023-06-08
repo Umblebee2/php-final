@@ -178,7 +178,7 @@ function display_admin_panel(){
               <select name="status" class="form-control">
                <option value="" disabled selected>Select Payment Status to update</option>
                 <option value="paid">paid</option>
-                <option value="pay later">pay later</option>
+                <option value="pay later">Pay later</option>
               </select><br><hr>
               <input type="submit" value="update" name="update_data" class="btn btn-primary">
             </form>
