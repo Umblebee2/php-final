@@ -101,6 +101,7 @@ INSERT INTO `contact` (`name`, `email`, `contact`, `message`) VALUES
 --
 
 CREATE TABLE `doctb` (
+  `did` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -205,12 +206,14 @@ ALTER TABLE `patreg`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--ALTER TABLE `doctb`
+  MODIFY COLUMN `did` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT;
 --
+
 -- AUTO_INCREMENT for table `appointmenttb`
 --
 ALTER TABLE `appointmenttb`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
 --
 -- AUTO_INCREMENT for table `patreg`
 --
