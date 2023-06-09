@@ -263,6 +263,7 @@ if(isset($_POST['docsub1']))
               <table class="table table-hover">
                 <thead>
                   <tr>
+                    <th scope="col">ID Doctor</th>
                     <th scope="col">Doctor Name</th>
                     <th scope="col">Specialization</th>
                     <th scope="col">Email</th>
@@ -277,6 +278,7 @@ if(isset($_POST['docsub1']))
                     $query = "select * from doctb";
                     $result = mysqli_query($con,$query);
                     while ($row = mysqli_fetch_array($result)){
+                      $did = $row['did'];
                       $username = $row['username'];
                       $spec = $row['spec'];
                       $email = $row['email'];
@@ -284,6 +286,7 @@ if(isset($_POST['docsub1']))
                       $docFees = $row['docFees'];
                       
                       echo "<tr>
+                        <td>$did</td>
                         <td>$username</td>
                         <td>$spec</td>
                         <td>$email</td>
@@ -507,6 +510,14 @@ if(isset($_POST['docsub1']))
                       <option value="Cardiologist" name="spec">Cardiologist</option>
                       <option value="Neurologist" name="spec">Neurologist</option>
                       <option value="Pediatrician" name="spec">Pediatrician</option>
+                      <option value="Pathology" name="spec">Pathology</option>
+                      <option value="Obstetrics and Gynecology" name="spec">Obstetrics and Gynecology</option>
+                      <option value="Internal Medicine" name="spec">Internal Medicine</option>
+                      <option value="Orthopedics" name="spec">Orthopedics</option>
+                      <option value="Dermatologists" name="spec">Dermatologists</option>
+                      <option value="Anesthesia" name="spec">Anesthesia</option>
+                      <option value="Dental Care" name="spec">Dental Care</option>
+                     
                     </select>
                     </div><br><br>
                   <div class="col-md-4"><label>Email ID:</label></div>
