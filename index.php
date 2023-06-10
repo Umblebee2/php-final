@@ -48,7 +48,7 @@ function checklen()
 </head>
 
 <!------ Include the above in your HEAD tag ---------->
-<body>
+<body style="background:-webkit-linear-gradient(right, #3931af, #00c6ff); background-size:cover;">
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
     <div class="container">
 
