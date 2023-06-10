@@ -78,7 +78,7 @@ if(isset($_POST['docsub1']))
 
   <style >
     .bg-primary {
-    background: -webkit-linear-gradient(#ADFF2F, #66FF00);
+    background: -webkit-linear-gradient(#3931af, #00c6ff);
 }
 
 .col-md-4{
@@ -88,11 +88,11 @@ if(isset($_POST['docsub1']))
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: #66FF00;
+    background-color: blue;
     border-color: #000000;
 }
 .text-primary {
-    color: #66FF00!important;
+    color: blue!important;
 }
 
 #cpass {
@@ -104,7 +104,7 @@ if(isset($_POST['docsub1']))
 }
 
 .btn-primary{
-  background-color:#66FF00;
+  background-color:blue;
   border-color: #000000;
 }
   </style>
