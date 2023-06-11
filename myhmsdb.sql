@@ -200,7 +200,7 @@ ALTER TABLE `patreg`
 -- AUTO_INCREMENT for dumped tables
 --
 
---ALTER TABLE `doctb`
+ALTER TABLE `doctb`
   MODIFY COLUMN `did` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT;
 --
 
