@@ -30,22 +30,22 @@ include("header.php");
 }
 
   </style>
-  <body style="background: -webkit-linear-gradient(left, #99FF66, #99FF99); background-size: cover;">
+  <body style="background: -webkit-linear-gradient(left, #007bff, #007bff); background-size: cover;">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" >
     <div class="container">
 
-      <a class="navbar-brand js-scroll-trigger" href="index.php" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp HMS</h4></a>
+      <a class="navbar-brand js-scroll-trigger" href="index.php" style="margin-top: 10px;margin-left:-65px;font-family: 'IBM Plex Sans', sans-serif;"><h4><i class="fa fa-user-plus" aria-hidden="true"></i>HMS</h4></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item" style="margin-right: 40px;">
-            <a class="nav-link js-scroll-trigger" href="services.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
+            <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>HOME</h6></a>
           </li>
   
           <li class="nav-item" style="margin-right: 40px;">
-            <a class="nav-link js-scroll-trigger" href="index.php" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>LOGINS</h6></a>
+            <a class="nav-link js-scroll-trigger" href="services.html" style="color: white;font-family: 'IBM Plex Sans', sans-serif;"><h6>ABOUT US</h6></a>
           </li>
 
           <li class="nav-item">
@@ -64,8 +64,7 @@ include("header.php");
         
 
          <div class="col-md-7" style="padding-left: 180px; ">
-                 <div style="-webkit-animation: mover 2s infinite alternate;
-    animation: mover 1s infinite alternate;">
+                 <div style="-webkit-animation: mover 2s infinite alternate; animation: mover 1s infinite alternate;">
           <img src="images/ambulance1.png" alt="" style="width: 20%;padding-left: 40px;margin-top: 150px;margin-left: 45px;margin-bottom:15px">
       </div>
 
@@ -92,8 +91,8 @@ include("header.php");
                 <div class="row">
                  <div class="col-md-4"  style="padding-left: 160px;margin-top: 10%">
                     <center><input type="submit" id="inputbtn" name="patsub" value="Login" class="btn btn-primary"></center></div>           
-                 <!--  <div class="col-md-8" style="margin-top: 10%">
-                    <a href="index.php" class="btn btn-primary">Back</a></div> -->
+                 <div class="col-md-8" style="margin-top: 10%">
+                    <a href="index.php" class="btn btn-primary">Back</a></div> 
                 </div>
               </form>
             </center>
