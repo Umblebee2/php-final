@@ -1,26 +1,39 @@
-
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th6 11, 2023 lúc 01:11 PM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
--- Database: `myhmsdb`
+-- Cơ sở dữ liệu: `myhmsdb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admintb`
+-- Cấu trúc bảng cho bảng `admintb`
 --
 
 CREATE TABLE `admintb` (
   `username` varchar(50) NOT NULL,
   `password` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `admintb`
+-- Đang đổ dữ liệu cho bảng `admintb`
 --
 
 INSERT INTO `admintb` (`username`, `password`) VALUES
@@ -29,7 +42,7 @@ INSERT INTO `admintb` (`username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `appointmenttb`
+-- Cấu trúc bảng cho bảng `appointmenttb`
 --
 
 CREATE TABLE `appointmenttb` (
@@ -46,30 +59,22 @@ CREATE TABLE `appointmenttb` (
   `apptime` time NOT NULL,
   `userStatus` int(5) NOT NULL,
   `doctorStatus` int(5) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `appointmenttb`
+-- Đang đổ dữ liệu cho bảng `appointmenttb`
 --
 
 INSERT INTO `appointmenttb` (`pid`, `ID`, `fname`, `lname`, `gender`, `email`, `contact`, `doctor`, `docFees`, `appdate`, `apptime`, `userStatus`, `doctorStatus`) VALUES
-(4, 1, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Ganesh', 550, '2020-02-14', '10:00:00', 1, 0),
-(4, 2, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Dinesh', 700, '2020-02-28', '10:00:00', 0, 1),
-(4, 3, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Amit', 1000, '2020-02-19', '03:00:00', 0, 1),
-(11, 4, 'Shraddha', 'Kapoor', 'Female', 'shraddha@gmail.com', '9768946252', 'ashok', 500, '2020-02-29', '20:00:00', 1, 1),
-(4, 5, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Dinesh', 700, '2020-02-28', '12:00:00', 1, 1),
-(4, 6, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Ganesh', 550, '2020-02-26', '15:00:00', 0, 1),
-(2, 8, 'Alia', 'Bhatt', 'Female', 'alia@gmail.com', '8976897689', 'Ganesh', 550, '2020-03-21', '10:00:00', 1, 1),
-(5, 9, 'Gautam', 'Shankararam', 'Male', 'gautam@gmail.com', '9070897653', 'Ganesh', 550, '2020-03-19', '20:00:00', 1, 0),
-(4, 10, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Ganesh', 550, '0000-00-00', '14:00:00', 1, 0),
-(4, 11, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'Dinesh', 700, '2020-03-27', '15:00:00', 1, 1),
-(9, 12, 'William', 'Blake', 'Male', 'william@gmail.com', '8683619153', 'Kumar', 800, '2020-03-26', '12:00:00', 1, 1),
-(9, 13, 'William', 'Blake', 'Male', 'william@gmail.com', '8683619153', 'Tiwary', 450, '2020-03-26', '14:00:00', 1, 1);
+(12, 14, 'Tran Ha', 'Linh', 'Female', 'linhlinh@gmail.com', '0123456789', 'Dinesh', 700, '2023-06-30', '14:00:00', 1, 1),
+(12, 15, 'Tran Ha', 'Linh', 'Female', 'linhlinh@gmail.com', '0123456789', 'Ganesh', 550, '2023-06-25', '14:00:00', 1, 1),
+(1, 16, 'Do Hoang', 'Tung', 'Male', 'tung@gmail.com', '9876543210', 'Ganesh', 550, '2023-06-25', '08:00:00', 1, 1),
+(12, 19, 'Tran Ha', 'Linh', 'Female', 'linhlinh@gmail.com', '0123456789', 'VD', 3000, '2023-06-24', '14:00:00', 1, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Cấu trúc bảng cho bảng `contact`
 --
 
 CREATE TABLE `contact` (
@@ -77,10 +82,10 @@ CREATE TABLE `contact` (
   `email` text NOT NULL,
   `contact` varchar(10) NOT NULL,
   `message` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `contact`
+-- Đang đổ dữ liệu cho bảng `contact`
 --
 
 INSERT INTO `contact` (`name`, `email`, `contact`, `message`) VALUES
@@ -92,12 +97,14 @@ INSERT INTO `contact` (`name`, `email`, `contact`, `message`) VALUES
 ('Karthick', 'karthi@gmail.com', '9898989898', 'Good service'),
 ('Abbis', 'abbis@gmail.com', '8979776868', 'Love your service'),
 ('Asiq', 'asiq@gmail.com', '9087897564', 'Love your service. Thank you!'),
-('Jane', 'jane@gmail.com', '7869869757', 'I love your service!');
+('Jane', 'jane@gmail.com', '7869869757', 'I love your service!'),
+('Linh', 'linh1@gmail.com', '0258788282', 'friendly interface'),
+('Van', 'van210@gmail.com', '0123456789', 'Lovely interface!!');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `doctb`
+-- Cấu trúc bảng cho bảng `doctb`
 --
 
 CREATE TABLE `doctb` (
@@ -107,26 +114,32 @@ CREATE TABLE `doctb` (
   `email` varchar(50) NOT NULL,
   `spec` varchar(50) NOT NULL,
   `docFees` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `doctb`
+-- Đang đổ dữ liệu cho bảng `doctb`
 --
 
-INSERT INTO `doctb` (`username`, `password`, `email`, `spec`, `docFees`) VALUES
-('ashok', 'ashok123', 'ashok@gmail.com', 'General', 500),
-('arun', 'arun123', 'arun@gmail.com', 'Cardiologist', 600),
-('Dinesh', 'dinesh123', 'dinesh@gmail.com', 'General', 700),
-('Ganesh', 'ganesh123', 'ganesh@gmail.com', 'Pediatrician', 550),
-('Kumar', 'kumar123', 'kumar@gmail.com', 'Pediatrician', 800),
-('Amit', 'amit123', 'amit@gmail.com', 'Cardiologist', 1000),
-('Abbis', 'abbis123', 'abbis@gmail.com', 'Neurologist', 1500),
-('Tiwary', 'tiwary123', 'tiwary@gmail.com', 'Pediatrician', 450);
+INSERT INTO `doctb` (`did`, `username`, `password`, `email`, `spec`, `docFees`) VALUES
+(12, 'Hong', '123456', 'hong123', 'Pathology', 800),
+(13, 'Huyen', '123456', 'huyen123', 'Anesthesia', 1600),
+(14, 'Hung', '123456', 'hung123', 'Dental Care', 600),
+(15, 'Tran Ngoc Hiep', '123456', 'hiep123@gmail.com', 'General', 2000),
+(16, 'Trinh Thuy Duong', '123456', 'duong@gmail.com', 'Cardiologist', 2500),
+(17, 'Do Thuy Trang', '123456', 'trang123@gmail.com', 'Neurologist', 3000),
+(18, 'Vanh Vanh', '123456', 'vanh@gmail.com', 'Pediatrician', 4000),
+(19, 'Bui Ngoc Diep', '123456', 'diep@gmail.com', 'Pathology', 1500),
+(20, 'Phan Khanh Ly', '123456', 'ly@gmail.com', 'Obstetrics and Gynecology', 450),
+(21, 'Pham Thi Tuyet', '123456', 'tuyet@gmail.com', 'Internal Medicine', 3500),
+(22, 'Bui Thi Hue', '123456', 'hue@gmail.com', 'Orthopedics', 6500),
+(23, 'Nguyen Thu Hoai', '123456', 'hoai@gmail.com', 'Dermatologists', 850),
+(24, 'Pham The Chien', '123456', 'chien@gmail.com', 'Anesthesia', 750),
+(25, 'Nguyen Thuy Duong', '123456', 'duong@gmail.com', 'Dental Care', 2500);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `patreg`
+-- Cấu trúc bảng cho bảng `patreg`
 --
 
 CREATE TABLE `patreg` (
@@ -138,23 +151,21 @@ CREATE TABLE `patreg` (
   `contact` varchar(10) NOT NULL,
   `password` varchar(30) NOT NULL,
   `cpassword` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `patreg`
+-- Đang đổ dữ liệu cho bảng `patreg`
 --
 
 INSERT INTO `patreg` (`pid`, `fname`, `lname`, `gender`, `email`, `contact`, `password`, `cpassword`) VALUES
-(1, 'Ram', 'Kumar', 'Male', 'ram@gmail.com', '9876543210', 'ram123', 'ram123'),
-(2, 'Alia', 'Bhatt', 'Female', 'alia@gmail.com', '8976897689', 'alia123', 'alia123'),
-(3, 'Shahrukh', 'khan', 'Male', 'shahrukh@gmail.com', '8976898463', 'shahrukh123', 'shahrukh123'),
-(4, 'Kishan', 'Lal', 'Male', 'kishansmart0@gmail.com', '8838489464', 'kishan123', 'kishan123'),
-(5, 'Gautam', 'Shankararam', 'Male', 'gautam@gmail.com', '9070897653', 'gautam123', 'gautam123');
+(1, 'Do Hoang', 'Tung', 'Male', 'tung@gmail.com', '9876543210', 'tung123', 'tung123'),
+(12, 'Tran Ha', 'Linh', 'Female', 'linhlinh@gmail.com', '0123456789', '123456', '123456'),
+(13, 'Tran Thi Vân ', 'Anh', 'Female', 'abc123@gmail.com', '0123456789', '123456', '123456');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prestb`
+-- Cấu trúc bảng cho bảng `prestb`
 --
 
 CREATE TABLE `prestb` (
@@ -168,51 +179,63 @@ CREATE TABLE `prestb` (
   `disease` varchar(250) NOT NULL,
   `allergy` varchar(250) NOT NULL,
   `prescription` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `prestb`
+-- Đang đổ dữ liệu cho bảng `prestb`
 --
 
 INSERT INTO `prestb` (`doctor`, `pid`, `ID`, `fname`, `lname`, `appdate`, `apptime`, `disease`, `allergy`, `prescription`) VALUES
 ('Dinesh', 4, 11, 'Kishan', 'Lal', '2020-03-27', '15:00:00', 'Cough', 'Nothing', 'Just take a teaspoon of Benadryl every night'),
 ('Ganesh', 2, 8, 'Alia', 'Bhatt', '2020-03-21', '10:00:00', 'Severe Fever', 'Nothing', 'Take bed rest'),
 ('Kumar', 9, 12, 'William', 'Blake', '2020-03-26', '12:00:00', 'Sever fever', 'nothing', 'Paracetamol -> 1 every morning and night'),
-('Tiwary', 9, 13, 'William', 'Blake', '2020-03-26', '14:00:00', 'Cough', 'Skin dryness', 'Intake fruits with more water content');
+('Tiwary', 9, 13, 'William', 'Blake', '2020-03-26', '14:00:00', 'Cough', 'Skin dryness', 'Intake fruits with more water content'),
+('Tran Ngoc Hiep', 12, 17, 'Tran Ha', 'Linh', '2023-06-18', '08:00:00', 'stomachache', 'Not', 'Drink warm water everyday'),
+('Tran Ngoc Hiep', 1, 18, 'Do Hoang', 'Tung', '2023-06-11', '15:00:00', 'cough', 'nothing', 'drink warm water everyday');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `appointmenttb`
+-- Chỉ mục cho bảng `appointmenttb`
 --
 ALTER TABLE `appointmenttb`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `patreg`
+-- Chỉ mục cho bảng `doctb`
+--
+ALTER TABLE `doctb`
+  ADD PRIMARY KEY (`did`);
+
+--
+-- Chỉ mục cho bảng `patreg`
 --
 ALTER TABLE `patreg`
   ADD PRIMARY KEY (`pid`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
-ALTER TABLE `doctb`
-  MODIFY COLUMN `did` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT;
 --
-
--- AUTO_INCREMENT for table `appointmenttb`
+-- AUTO_INCREMENT cho bảng `appointmenttb`
 --
 ALTER TABLE `appointmenttb`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
 --
--- AUTO_INCREMENT for table `patreg`
+-- AUTO_INCREMENT cho bảng `doctb`
+--
+ALTER TABLE `doctb`
+  MODIFY `did` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT cho bảng `patreg`
 --
 ALTER TABLE `patreg`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
